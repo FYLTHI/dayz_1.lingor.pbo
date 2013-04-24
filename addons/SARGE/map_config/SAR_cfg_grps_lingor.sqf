@@ -152,53 +152,53 @@ _this setMarkerBrush "Solid";
 _this setMarkerSize [4500, 4500];
 SAR_marker_patrol_mainland = _this;
  
-_this = createMarker ["SAR_area_Survivor_Camp", [1273.59,2285.12,0.001]];
+_this = createMarker ["SAR_area_Survivor_Camp", [1273.59,2285.12]];
 _this setMarkerShape "RECTANGLE";
-_this setMarkeralpha 0;
+_this setMarkeralpha 1;
 _this setMarkerType "Flag";
 _this setMarkerBrush "Solid";
 _this setMarkerSize [4500, 4500];
 SAR_marker_Survivor_Camp = _this;
  
-_this = createMarker ["SAR_area_Desert_Base", [1184.63,2668.26,0.001]];
+_this = createMarker ["SAR_area_Desert_Base", [1184.63,2668.26]];
 _this setMarkerShape "RECTANGLE";
-_this setMarkeralpha 0;
+_this setMarkeralpha 1;
 _this setMarkerType "Flag";
 _this setMarkerBrush "Solid";
 _this setMarkerSize [4500, 4500];
 SAR_marker_Desert_Base = _this;
  
- _this = createMarker ["SAR_area_Bandit_Camp", [8113.03,6722.69,0.001]];
+ _this = createMarker ["SAR_area_Bandit_Camp", [8113.03,6722.69]];
 _this setMarkerShape "RECTANGLE";
-_this setMarkeralpha 0;
+_this setMarkeralpha 1;
 _this setMarkerType "Flag";
 _this setMarkerBrush "Solid";
 _this setMarkerSize [4500, 4500];
 SAR_marker_Bandit_Camp = _this;
  
-_this = createMarker ["SAR_area_El_Presedente", [8113.03,6722.69,0.001]];
+_this = createMarker ["SAR_area_El_Presedente", [8113.03,6722.69]];
 _this setMarkerShape "RECTANGLE";
-_this setMarkeralpha 0;
+_this setMarkeralpha 1;
 _this setMarkerType "Flag";
 _this setMarkerBrush "Solid";
 _this setMarkerSize [4500, 4500];
 SAR_marker_El_Presedente = _this;
  
-_this = createMarker ["SAR_area_Burnt_House", [6601.04,6551.14,0.571]];
+_this = createMarker ["SAR_area_Burnt_House", [6601.04,6551.14]];
 _this setMarkerShape "RECTANGLE";
-_this setMarkeralpha 0;
+_this setMarkeralpha 1;
 _this setMarkerType "Flag";
 _this setMarkerBrush "Solid";
 _this setMarkerSize [4500, 4500];
 SAR_marker_Burnt_House = _this;
  
-_this = createMarker ["SAR_area_Bandit_Outpost", [6410.79,5595.92,0.001]];
+_this = createMarker ["SAR_area_Bandit_Outpost", [6410.79,5595.92]];
 _this setMarkerShape "RECTANGLE";
-_this setMarkeralpha 0;
+_this setMarkeralpha 1;
 _this setMarkerType "Flag";
 _this setMarkerBrush "Solid";
 _this setMarkerSize [4500, 4500];
-SAR_marker_Burnt_House = _this;
+SAR_marker_Bandit_Outpost = _this;
 
 
 // ---------------------------------------------------------------
@@ -225,11 +225,11 @@ diag_log format["SAR_AI: Static Spawning for Helicopter patrols started"];
 
 // add if needed, see examples in the chernarus file
 
-[SAR_Bandit_Camp,floor(random 2)+1] call SAR_AI_heli;
-[SAR_Survivor_Camp,floor(random 2)+1] call SAR_AI_heli;
-[SAR_El_Presedente,floor(random 2)+1] call SAR_AI_heli;
-[SAR_Desert_Base,floor(random 2)+1] call SAR_AI_heli;
-[SAR_Bandit_Outpost,floor(random 2)+1] call SAR_AI_heli;.
+[SAR_marker_Bandit_Camp,floor(random 3)+1] call SAR_AI_heli;
+[SAR_marker_Survivor_Camp,floor(random 3)+1] call SAR_AI_heli;
+[SAR_marker_El_Presedente,floor(random 3)+1] call SAR_AI_heli;
+[SAR_marker_Desert_Base,floor(random 3)+1] call SAR_AI_heli;
+[SAR_marker_Bandit_Outpost,floor(random 3)+1] call SAR_AI_heli;.
 
 diag_log format["SAR_AI: Static Spawning for Helicopter patrols finished"];
 
